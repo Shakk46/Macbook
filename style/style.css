@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'roboto', sans-serif;
+}
+button {
+    cursor: pointer;
+}
+.container {
+    max-width: 1400px;  
+    margin: 45px auto;
+    padding:20px; 
+}
+.heading {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+.description {   
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 24px auto;
+}
+.macbook {
+    max-width: 680px;
+    display: flex;
+    align-items: center;
+    gap: 76px;
+    margin: 60px auto;
+}
+.grid1 {
+    grid-column: 1, 3;
+    grid-row: 1, 2;
+}
+.chose {
+    max-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.colors {
+    display: flex;
+    gap: 10px;
+}
+.color {
+    width: 50%;
+    height: 42px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    transition:300ms
+}
+.active {
+    background: rgba(0, 113, 227, 1);
+}
+.not-active {
+    background: rgba(207, 231, 255, 1);
+    color: rgba(121, 121, 121, 1);
+    border: 1px white solid;
+    transition: 300ms;
+}
+.color:hover {
+    border:1px green solid;
+}
+.models {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.model {
+    border: 2px solid rgba(207, 231, 255, 1);
+    width: 100%;
+    height: 57px;
+    background: white;
+    padding: 18px 20px;
+    text-align-last: left;
+    border-radius: 10px;
+    transition: 300ms;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.model:hover {
+    border: 2px solid rgba(0, 127, 255, 1);
+}
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+}
+.macbook-color {  
+font-size: 24px;
+font-weight: 700;
+color: rgba(0, 113, 227, 1);
+}
+.price {
+    margin: 48px 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+@media (max-width:700px) {
+    .heading{
+        font-size: 25px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .chose {
+        margin: 0 auto;
+        max-width: 75vw;
+    }
+    .macbook {
+        flex-direction: column;
+        align-items: center;
+    }
+}
