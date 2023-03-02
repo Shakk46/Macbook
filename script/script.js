@@ -58,16 +58,34 @@ for(let model of models) {
     })
 }
 
+
+
 let modal = doc.querySelector('.modal')
 let close = doc.querySelector('.close')
 
 price.addEventListener('click', () => {
+    burger.style.display = 'none'
     modal.style.display = 'grid'
-    
     body.style.overflow = 'hidden'
     body.style.height = '500px'
 })
 close.addEventListener('click', () => {
     modal.style.display = 'none'
     body.style.overflow = 'auto'
+    burger.style.display = 'block'
+})
+
+let burger = doc.querySelector('.burger-menu')
+let menu = doc.querySelector('.menu-full')
+let close2 = doc.querySelector('.close2')
+
+
+burger.addEventListener('click', () => {
+    burger.style.display = 'none'
+    menu.style.transform = 'translateX(0%)'
+})
+
+close2.addEventListener('click', () => {
+    menu.style.transform = 'translateX(150%)'
+    burger.style.display = 'block'
 })

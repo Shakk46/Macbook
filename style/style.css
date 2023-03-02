@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family:  'roboto', sans-serif;
+    text-decoration: none;
+    
+}
+a {
+    color: white;
+}
+ul {
+    list-style-type: none;
 }
 body {
     background-color: white;
@@ -120,6 +128,10 @@ color: rgba(0, 113, 227, 1);
     .macbook {
         flex-direction: column;
         align-items: center;
+        gap: 40px;
+    }
+    .macbook img {
+        scale:0.8;
     }
 }
 
@@ -132,25 +144,26 @@ color: rgba(0, 113, 227, 1);
     height: 100vh;
     width: 98.9vw;
     background-color: rgba(0, 0, 0, 0.47);
-
 }
 .modal-form {
     background: white;
-    padding: 50px;
     width: 592px;
     height: 388px;
-    position: sticky;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin: 20px;
 }
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    
+    width: 80%;
 }
 .modal-form input {
     display: block;
-    width: 420px;
+    width: 100%;
     height: 48px;
     padding:0 15px;
     border-radius: 10px;
@@ -172,4 +185,81 @@ color: rgba(0, 113, 227, 1);
     place-content: center;
     background-color: white;
     border: none;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.burger-menu span {
+    font-size: 50px;
+}
+.menu-full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 25%;
+    height: 100%;
+    padding: 40px;
+    transform: translateX(150%);
+    transition:.3s ease;
+}
+.menu-full h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-full ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.menu-full li {
+    font-size: 25px;
+    cursor: pointer;
+}
+.menu-full span {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width:920px) {
+    .modal-form {
+        max-width: 420px;
+    }
+    .modal-form {
+        width: 80%;
+    }
+    .form h1 {
+        font-size: 25px;
+    }
+    .burger-menu span{
+        font-size: 35px;
+    }
+    .menu-full {
+        transform: translateY(-150%);
+        width: 100%;
+        margin: 0 auto;
+    }
+    .menu-full h1{
+        font-size: 40px;
+    }
+    .menu-full li {
+        text-align: center;
+    }
+    .close2 {
+        right: 35px;
+        top: 35px;
+        
+    }
+    .close2 span {
+        font-size: 35px;
+    }
+}
+@media (max-width:424px) {
+    .close2 span {
+        font-size: 25px;
+    }
 }
