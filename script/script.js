@@ -1,4 +1,5 @@
-let doc = document 
+let doc = document
+let body = document.body
 // Вытаскиваю все необходимые элементы на сайте
 let colorBtn1 = doc.querySelectorAll('.color')[0]
 let colorBtn2 = doc.querySelectorAll('.color')[1]
@@ -57,3 +58,16 @@ for(let model of models) {
     })
 }
 
+let modal = doc.querySelector('.modal')
+let close = doc.querySelector('.close')
+
+price.addEventListener('click', () => {
+    modal.style.display = 'grid'
+    
+    body.style.overflow = 'hidden'
+    body.style.height = '500px'
+})
+close.addEventListener('click', () => {
+    modal.style.display = 'none'
+    body.style.overflow = 'auto'
+})
