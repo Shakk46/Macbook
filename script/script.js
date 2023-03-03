@@ -60,31 +60,35 @@ for(let model of models) {
 
 
 
+
+// Находим элементы модалки.
 let modal = doc.querySelector('.modal')
 let close = doc.querySelector('.close')
 
+// Вешаем слушатель событий. Убераем overflow чтобы убрать скролл
 price.addEventListener('click', () => {
     burger.style.display = 'none'
     modal.style.display = 'grid'
     body.style.overflow = 'hidden'
     body.style.height = '500px'
 })
+// То же самое на кнопку закрытия
 close.addEventListener('click', () => {
     modal.style.display = 'none'
     body.style.overflow = 'auto'
     burger.style.display = 'block'
 })
-
+// Находим элементы меню
 let burger = doc.querySelector('.burger-menu')
 let menu = doc.querySelector('.menu-full')
 let close2 = doc.querySelector('.close2')
 
-
+// Вешаем слушатель события. translate будет выдвигать меню слева
 burger.addEventListener('click', () => {
     burger.style.display = 'none'
     menu.style.transform = 'translateX(0%)'
 })
-
+// Возращаем бургер и убираем меню на кнопку закрытия меню.
 close2.addEventListener('click', () => {
     menu.style.transform = 'translateX(150%)'
     burger.style.display = 'block'
