@@ -94,4 +94,5 @@ burger.addEventListener('click', () => {
 close2.addEventListener('click', () => {
     menu.style.transform = 'translateX(150%)'
     burger.style.display = 'block'
+    body.style.overflow = 'auto'
 })
