@@ -87,6 +87,8 @@ let close2 = doc.querySelector('.close2')
 burger.addEventListener('click', () => {
     burger.style.display = 'none'
     menu.style.transform = 'translateX(0%)'
+    body.style.overflow = 'hidden'
+
 })
 // Возращаем бургер и убираем меню на кнопку закрытия меню.
 close2.addEventListener('click', () => {

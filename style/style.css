@@ -207,6 +207,7 @@ color: rgba(0, 113, 227, 1);
     padding: 40px;
     transform: translateX(150%);
     transition:.3s ease;
+    overflow: auto;
 }
 .menu-full h1 {
     text-align: center;
