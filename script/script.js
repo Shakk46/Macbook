@@ -3,18 +3,20 @@ let body = document.body
 // Вытаскиваю все необходимые элементы на сайте
 let colorBtn1 = doc.querySelectorAll('.color')[0]
 let colorBtn2 = doc.querySelectorAll('.color')[1]
-let img = doc.querySelector('.image')
+let images = doc.querySelectorAll('.image')
 let macColor = doc.querySelector('.macbook-color')
 let price = doc.querySelector('.price')
 let models = doc.querySelectorAll('.model')
 // Сохраняю в переменных пути к картинкам
-let img1 = './images/macbook1.jpg'
-let img2 = './images/mac_2.svg'
+let img1 = ['./images/macbookWhite1.svg', './images/macbookWhite2.jpg', './images/macbookWhite3.jpg']
+let img2 = ['./images/macbookGrey1.jpg', './images/macbookGrey2.jpg', './images/macbookGrey3.jpg']
 
 // Создаём слушатель событий на кнопки смена цвета
 colorBtn1.addEventListener('click', () => {
     // Меняем картинку на странице
-    img.src = img2
+    for(let i = 0; i < images.length; i++) {
+        images[i].src = img1[i]
+    }
     // Меняем классы для смены стилей кнопок
     colorBtn1.className = 'color active'
     colorBtn2.className = 'color not-active'
@@ -23,8 +25,10 @@ colorBtn1.addEventListener('click', () => {
 })
 
 colorBtn2.addEventListener('click', () => {
-    // Меняем картинку на странице
-    img.src = img1
+    // Меняем картинки на странице
+    for(let i = 0; i < images.length; i++) {
+        images[i].src = img2[i]
+    }
     // Меняем классы для смены стилей кнопок
     colorBtn2.className = 'color active'
     colorBtn1.className = 'color not-active'
@@ -96,3 +100,18 @@ close2.addEventListener('click', () => {
     burger.style.display = 'block'
     body.style.overflow = 'auto'
 })
+
+
+// Параметры библиотеки
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    observer: true,
+    observeParents: true,
+    direction: 'horizontal',
+    loop: true,
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
